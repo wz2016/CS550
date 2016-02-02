@@ -1,0 +1,72 @@
+dhcp184:~ weilunzhao$ cd /Users/weilunzhao/Documents/JAVA/src/MyClient_resilience 
+dhcp184:MyClient_resilience weilunzhao$ ant
+Buildfile: /Users/weilunzhao/Documents/JAVA/src/MyClient_resilience/build.xml
+
+clean:
+
+compile:
+    [mkdir] Created dir: /Users/weilunzhao/Documents/JAVA/src/MyClient_resilience/build/classes
+    [javac] Compiling 1 source file to /Users/weilunzhao/Documents/JAVA/src/MyClient_resilience/build/classes
+
+jar:
+    [mkdir] Created dir: /Users/weilunzhao/Documents/JAVA/src/MyClient_resilience/build/jar
+      [jar] Building jar: /Users/weilunzhao/Documents/JAVA/src/MyClient_resilience/build/jar/MyClient.jar
+
+run:
+     [java] Please input the operation you want : (input/get/del)  
+     [java] ************************************
+     [java] * Client: A start ...              *
+     [java] * Author Weilun Zhao ; A20329942   *
+     [java] ************************************
+input
+     [java] Please input the KEY: 
+B
+     [java] Pleas input the VALUE: 
+zwl20329942
+     [java] the client number 2
+     [java] Save key and value to B:9988
+     [java] Back up the key and value to E:9955
+     [java] input successfully
+     [java] Please input the operation you want : (input/get/del)  
+get
+     [java] Please input the KEY: 
+B
+     [java] get the value is : zwl20329942
+     [java] get successfully
+     [java] Please input the operation you want : (input/get/del)  
+del
+     [java] Please input the KEY: 
+B
+     [java] delete successfully
+     [java] Please input the operation you want : (input/get/del)  
+get
+     [java] Please input the KEY: 
+C
+     [java] Try to using back up server to get value
+     [java] get failed
+     [java] Please input the operation you want : (input/get/del)  
+del
+     [java] Please input the KEY: 
+D
+     [java] delete failed
+     ******** I closed client 2 at this step ***********
+     [java] Please input the operation you want : (input/get/del)  
+input
+     [java] Please input the KEY: 
+B
+     [java] Pleas input the VALUE: 
+newtest
+     [java] the client number 2
+     [java] Save key and value to B:9988
+     [java] Back up the key and value to E:9955
+     [java] input successfully
+     [java] Please input the operation you want : (input/get/del)  
+get
+     [java] Please input the KEY: 
+B
+     [java] java.net.ConnectException: Connection refused
+     [java] Try to using back up server to get value
+     [java] get the value is : zwl20329942
+     [java] get successfully
+     [java] Please input the operation you want : (input/get/del)  
+

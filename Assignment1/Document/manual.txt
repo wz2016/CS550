@@ -1,0 +1,34 @@
+CS550 Assignment 1
+Manual
+Weilun Zhao
+
+1. Test Environment
+All the tests taken on my own computer.
+OS X Yosemite version: 10.10.5 (14F27)
+
+2. Compile and runn
+Open the terminale 
+In the source code directory 
+Input:
+	ant
+to compile and run the server.
+
+Input: 
+	ant
+to compile and run the client.
+
+3. Configure
+1). (/UP) and (/DL) two files created in the client directory. 
+	(/UP) stores fills registering to server ; 
+	(/DL) stores file downloaded from other client.
+2). Configure out the address and port of Server
+	Configure out the p2p server port
+
+4. Running Programs
+MyServer: 
+		display server IP address and files info registered in server
+MyClient: 
+		a. Input the file name to search and download and display the local files registered on server
+		b. If the input file name do not found in the server, client will display "No file found"
+		c. If the input file name found in the server, client will display how many file registered with the input file name. And there will be a list displaying files index and info.
+		d. Then input the index to download the file from other client

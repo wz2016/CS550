@@ -1,0 +1,30 @@
+CS550 Assignment 2 
+Weilun Zhao; A20329942
+
+Manual
+
+1. Test Environment
+All the tests taken on my own computer.
+OS X Yosemite version: 10.10.5 (14F27)
+
+2. Clients compile and run
+	a.Open the terminal
+	b.To run distribute clients, open several terminal/press “control + T”/press “control + N”
+	c.change the current directory to each file path including the client source code, “build.xml”, and “list.txt”
+	d.input “ant” to compile and run each client.	
+
+* warn: MyClient and MyClient_resilience have the same address and same port, so they cannot run at the same time.
+
+3. Tester compile and run
+* warn: Running client 1 to client 8 before starting the tester
+	a. Open a new terminal
+	b. change the current directory to tester file path including the test source code, “build.xml”, and “list.txt”
+	c.input “ant” to compile and run
+
+4. Running programs
+After compile and run each Client:
+	a. Input the operation such as “input”, “get” and “del”
+	b. If input the “input” command at the first operation, then input the Key and Value separately to save the <key, value> into DHT.
+	c. If input the “get” command at the first operation, then input the Key to get the Value from the DHT.
+	d. If input the “del” command at the first operation, then input the Key to delete the Value from the DHT.
+	

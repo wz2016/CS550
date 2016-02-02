@@ -1,0 +1,22 @@
+CS550 Assignment1 
+Performance Evaluation
+Weilun Zhao; A20329942
+
+1. function evaluation
+passed cases:
+	a. Three clients can connected with server 
+	b. Input non-exist file name
+	c. Input invalid index to down load files (in the file list)
+	d. Download same file from at other two clients concurrently
+	e. Download picture or .pdf files
+	f. Download a file which have been downloaded
+	g. Download a binary file
+
+2. Performance Evaluation
+
+run:
+     [java] The thread number is : 10
+     [java] the look up time is : 1000
+     [java] 10 client threads end and execute 1000 time searchFile() 
+     [java] The average time of search 0.001861s
+
