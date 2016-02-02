@@ -1,0 +1,33 @@
+run:
+     [java] ************************************
+     [java] * Client: D start ...              *
+     [java] * Author Weilun Zhao ; A20329942   *
+     [java] ************************************
+     [java] Prepare to register local files?(input yes to start)
+yes
+     [java] Registering client files
+     [java] fileName: .DS_Store ;fileSize: 6148
+     [java] Save key and value to F:9944
+     [java] Back up the key and value to G:9933
+     [java] fileName: A ;fileSize: 19
+     [java] Save key and value to A:9999
+     [java] Back up the key and value to B:9988
+     [java] 
+     [java] Input the fileName to search in DHT: 
+B
+     [java] try to find the file in the back up server
+     [java] No file found 
+     [java] Input the fileName to search in DHT: 
+A
+     [java] get the value is : A/19/D/9966
+     [java] Download ......
+     [java] 
+     [java] Download Success, file saved to: DL/A
+     [java] ---------------------------------------
+     [java] Input the fileName to search in DHT: 
+test
+     [java] Unexist key be requested to get
+     [java] try to find the file in the back up server
+     [java] No file found 
+     [java] Input the fileName to search in DHT: 
+

@@ -1,0 +1,51 @@
+CS550 Assignment 1
+Design Document
+Weilun Zhao; A20329942
+
+1. Program design
+The project contains two programs:
+MyServer.java(Source code for server)
+MyClient.java(Source code for client)
+
+MyServer.java:
+	a. Initial clientList which contains client info.
+	b. Class ClientNode is the object of client info containing client name, client address, registered files name and size, and client port.
+	c. Initial serverThread with given port and address and start serverThread.
+    d. Server waits to be connected with clients unceasingly. If server connects with clients and get input info from client.
+    e. Select method such as searchFile() and regFile() by using input info.
+    f. regFile() registers files info and client info which contains the files into clientList.
+    g. searchFile() searches files by using the input file name in clientList. And return all the files info with their client info to client which sends search request.
+    h. functionSelect() collects the input stream info, header (UP/DL/ALL) and select methods by using headers
+    i. displayAll() return display all the register files info to client
+
+MyClient.java:
+    a. Initial fileList which contains file info.
+    b. Class FileNode is the object of file info containing file name and size.
+
+    c. Initial client info such as client client name, port and file path:
+        "fileFolder" contains files registering to the server
+        "downLoadFolder" contains files obtaining from p2p client
+    d. The ClientThreadToRegFile class connects with server and sends register require,  file info, and client info to server.
+    e. Client uses searchFile() to input file name searching in server. If finding files with the same name in server register info, client will get a list of files with their client and index by using perpareDownoad().
+    f. To download file, user need input index, using getFile(), and get file which user want from other p2p client.
+
+    g. When other client uses getFile() to download files from the local client, P2Pthread class initial the connection between two clients. And the local client will be a server to be required and send files.
+    h. displayAll(): this method displays all the files registered in the server
+    
+2. Tradeoffs
+    a. Set vs List
+        Set is easy to implement concurrency and synchronization which can keep the correctness for programs, although using list contains the object can get the sequence of object.
+
+    b. TCP vs UDP
+        UDP is a connectionless protocol, but TCP is a connection-oriented protocol.
+        TCP can provide high reliability and its transmission time is relatively less critial. And TCP can guarantee that the data transferred remains intact and arrives in the same order in which is was sent.
+
+    c. Java vs C
+        Java has java.io which provide input and output through data streams, serialization and the file system; java.net can provide the classes for implementing networking application. Both packages can provide powerful API to implement socket and send file by using java.
+
+3. Improvements
+    a. The client can update the file periodically to the server and can delete the file info from server when client detects a file be deleted from the "fileFolder".
+    b. Adding a new method displays all the files registered in server helping user to search, when user want to overlook all files.
+    c. Design a more efficient way to set and get client/server name and address.
+    d. Server can add new method to close socket, when there is no client send request in a long time. And Server also should be activated when get a request.
+    e. Adding Block in the client when clients send register and search request.
